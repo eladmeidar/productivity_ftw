@@ -19,6 +19,7 @@ h2. Adding more hosts to block
 open the <code>b-productive.rb</code> file and add to the <code>BLOCK_LIST</code> host array, a better solution is welcome, i am just lazy.
 
 h2. "Thank you"s
+
 <strong>productivity_ftw</strong> was created by <a href="http://blog.eizesus.com">Elad Meidar</a>, with the awesome <a href="http://github.com/bjeanes/ghost/">ghost</a> gem by <a href="http://bjeans.com">bjeans<a/> and the <a href="http://gist.github.com/188861">Ruby server in one gist</a> by <a href="http://gist.github.com/h0rs3r4dish">h0rs3r4dish</a> 
 
 
