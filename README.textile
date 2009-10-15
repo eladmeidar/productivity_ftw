@@ -8,7 +8,7 @@ just checkout the source:
 <pre>git clone git://github.com/eladmeidar/productivity_ftw.git</pre>
 
 and fire off the productivity enhancing server:
-<pre>cd productivity_ftw
+<pre>
 sudo ruby productivity_ftw.rb
 </pre>
 
