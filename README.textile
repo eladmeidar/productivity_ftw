@@ -1,0 +1,25 @@
+h1. Producivity FTW!
+
+Tired of wasting your time on useless crap like facebook/twitter/other-time-consuming-no-profit-website? well *productivity_ftw* is just for you.
+
+h2. Installing 
+
+just checkout the source:
+<pre>git clone git://github.com/eladmeidar/productivity_ftw.git</pre>
+
+and fire off the productivity enhancing server:
+<pre>cd productivity_ftw
+sudo ruby productivity_ftw.rb
+</pre>
+
+note that you *have to use sudo* cause you are taking over port 80, not sure if it's required on windows also.
+
+h2. Adding more hosts to block
+
+open the <code>b-productive.rb</code> file and add to the <code>BLOCK_LIST</code> host array, a better solution is welcome, i am just lazy.
+
+h2. "Thank you"s
+<strong>productivity_ftw</strong> was created by <a href="http://blog.eizesus.com">Elad Meidar</a>, with the awesome <a href="http://github.com/bjeanes/ghost/">ghost</a> gem by <a href="http://bjeans.com">bjeans<a/> and the <a href="http://gist.github.com/188861">Ruby server in one gist</a> by <a href="http://gist.github.com/h0rs3r4dish">h0rs3r4dish</a> 
+
+
+
