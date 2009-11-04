@@ -20,9 +20,14 @@ h2. Adding more hosts to block
 
 To create your own blocklist, create a <tt>~/.productivity_ftwrc</tt> file in your home directory. See <tt>productivity_ftwrc.sample</tt> for an example of the right format.
 
+h2. Overriding the productive page
+
+Not everyone likes Rick Astley! That's okay.
+
+Step 1: Click <a href="http://www.youtube.com/watch?v=XLsJryWc5XE">here</a> for a quick overview on the internal architecture.
+
+Step 2: Create a <tt>~/.productivity_ftw_page</tt> file in your home directory. See the default <tt>pages/productive_page</tt>.
+
 h2. "Thank you"s
 
-<strong>productivity_ftw</strong> was created by <a href="http://blog.eizesus.com">Elad Meidar</a>, with the awesome <a href="http://github.com/bjeanes/ghost/">ghost</a> gem by <a href="http://bjeans.com">bjeans</a> and the <a href="http://gist.github.com/188861">Ruby server in one gist</a> by <a href="http://gist.github.com/h0rs3r4dish">h0rs3r4dish</a> 
-
-
-
+<strong>productivity_ftw</strong> was created by <a href="http://blog.eizesus.com">Elad Meidar</a>, with the awesome <a href="http://github.com/bjeanes/ghost/">ghost</a> gem by <a href="http://bjeans.com">bjeans</a> and the <a href="http://gist.github.com/188861">Ruby server in one gist</a> by <a href="http://gist.github.com/h0rs3r4dish">h0rs3r4dish</a>
