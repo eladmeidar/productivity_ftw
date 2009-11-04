@@ -12,11 +12,13 @@ and fire off the productivity enhancing server:
 sudo ruby productivity_ftw.rb
 </pre>
 
+(you'll probably need to install the bjeanes-ghost gem first)
+
 note that you *have to use sudo* cause you are taking over port 80, not sure if it's required on windows also.
 
 h2. Adding more hosts to block
 
-open the <code>b-productive.rb</code> file and add to the <code>BLOCK_LIST</code> host array, a better solution is welcome, i am just lazy.
+To create your own blocklist, create a <tt>~/.productivity_ftwrc</tt> file in your home directory. See <tt>productivity_ftwrc.sample</tt> for an example of the right format.
 
 h2. "Thank you"s
 

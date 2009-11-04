@@ -4,13 +4,29 @@ class Productivity
   
   require 'rubygems'
   begin
-    gem 'ghost'
+    gem 'bjeanes-ghost'
     require 'ghost'
   rescue Gem::LoadError
     puts "you need to install the ghost gem from http://github.com/bjeanes/ghost"
   end
+
+  # Format of .productivity_ftwrc (saved in home dir):
+  # - Each line is a space-separated list of one or more words.
+  # - First word is the base of the subdomain.
+  # - If not qualified with .com/.net/.org, assumed to be .com
+  # - The www. prefix is assumed to be blocked.
+  # - subsequent words are subdomains to block.
+  productivity_ftwrc = "#{ENV['HOME']}/.productivity_ftwrc"
+  if File.exists?(productivity_ftwrc)
+    BLOCK_LIST = File.read(productivity_ftwrc).split("\n").map do |domain, subdomains|
+      domain += ".com" unless domain =~ /\.(org|net|com)/
+      subdomains ||= []
+      ["#{domain}", "www.#{domain}"] + subdomains.map{|subdomain| "#{subdomain}.#{domain}"}
+    end.flatten
+  else
+    BLOCK_LIST = ["facebook.com", "www.facebook.com", "www.twitter.com", "api.twitter.com", "twitter.com"]
+  end
   
-  BLOCK_LIST = ["facebook.com", "www.facebook.com", "www.twitter.com", "api.twitter.com", "twitter.com"]
   ALLOWED_ACTIONS = ["start", "stop"]
   
   def self.start
