@@ -18,9 +18,8 @@ class Productivity
   # - subsequent words are subdomains to block.
   productivity_ftwrc = "#{ENV['HOME']}/.productivity_ftwrc"
   if File.exists?(productivity_ftwrc)
-    BLOCK_LIST = File.read(productivity_ftwrc).split("\n").map do |domain, subdomains|
+    BLOCK_LIST = File.read(productivity_ftwrc).split("\n").map(&:split).map do |domain, *subdomains|
       domain += ".com" unless domain =~ /\.(org|net|com)/
-      subdomains ||= []
       ["#{domain}", "www.#{domain}"] + subdomains.map{|subdomain| "#{subdomain}.#{domain}"}
     end.flatten
   else
@@ -43,7 +42,7 @@ class Productivity
   def self.stop
     BLOCK_LIST.each do |block_target|
       Host.delete(block_target)
-      puts "Productivity degraded -10, (Now available for distraction: #{BLOCK_LIST.join(', ')})"
     end
+    puts "Productivity degraded -10, (Now available for distraction: #{BLOCK_LIST.join(', ')})"
   end
 end
